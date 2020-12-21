@@ -1,0 +1,95 @@
+:root {
+    --dark-cyan: hsl(185, 71%, 47%);
+    --very-dark: hsl(229, 23%, 23%);
+    --dark-gray: hsl(227, 10%, 46%);
+    --light-gray:  hsl(227, 10%, 90%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1 rem = 10 px
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #fafafa;
+    width: 326px;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.300);
+
+    &-header {
+        width: 100%;
+        display: block;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--light-gray);
+
+
+        &-img {
+            border: 5px solid #fafafa;
+            border-radius: 50%;
+            background-color: #fafafa;
+            width:110px;
+            height:110px;
+            margin-top: calc(-50px - 5px);
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            span {
+                color: var(--very-gray);
+                font-weight: 400;
+                margin-left: 0.7rem;
+            }
+        }
+
+        &-text {
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 0;
+        } 
+    }
+
+    &-footer {
+        display:flex;
+        justify-content: space-around;
+
+        &-social {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--very-dark);
+
+            p {
+                letter-spacing: 1px;
+                color: var(--dark-gray);
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
